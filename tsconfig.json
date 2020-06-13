@@ -1,0 +1,40 @@
+{
+  "extends": "./tsconfig.extended.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "target": "es5",
+    "module": "esnext",
+    "allowJs": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": false,
+    "jsx": "react",
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "noEmit": true,
+    "strictNullChecks": false
+  },
+  "rules": {
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-useless-constructor": "error"
+  },
+  "include": [
+    "./src/**/*.js",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.jsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}

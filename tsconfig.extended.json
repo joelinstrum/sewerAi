@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@uicomponents": ["components/ui"],
+      "@components/*": ["components/*"],
+      "@containers/*": ["containers/*"],
+      "@lib/*": ["lib/*"],
+      "@redux/*": ["redux/*"],
+      "@scss/*": ["scss/*"],
+      "@config/*": ["config/*"]
+    }
+  }
+}

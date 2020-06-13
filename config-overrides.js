@@ -11,5 +11,7 @@ module.exports = override(
     "@redux": path.resolve(__dirname, "src/redux"),
     "@theme": path.resolve(__dirname, "src/theme"),
     "@config": path.resolve(__dirname, "src/config"),
+    "@scss": path.resolve(__dirname, "src/scss"),
+    "@uicomponents": path.resolve(__dirname, "src/components/ui")
   })
 );
