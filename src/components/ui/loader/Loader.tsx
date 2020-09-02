@@ -1,22 +1,22 @@
 import React from "react";
 import LoaderLoading from "./LoaderLoading";
 import "./loader.scss";
+import { LoadingDiv } from "./Elements";
 
-interface Props {
+interface IProps {
   isLoading: boolean;
+  message?: string;
   children?: any;
 }
 
-export default class Loader extends React.Component<Props> {
-  render() {
-    return (
-      <div>
-        {this.props.isLoading ? (
-          <LoaderLoading />
-        ) : (
-          <React.Fragment>{this.props.children}</React.Fragment>
-        )}
-      </div>
-    );
-  }
-}
+export default (props: IProps) => {
+  return (
+    <LoadingDiv>
+      {props.isLoading ? (
+        <LoaderLoading message={props.message} />
+      ) : (
+        <React.Fragment>{props.children}</React.Fragment>
+      )}
+    </LoadingDiv>
+  );
+};

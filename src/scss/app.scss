@@ -3,10 +3,125 @@
 html,
 body {
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   font-family: $fontFamily;
   background: $bodyBackground;
   color: $bodyFontColor;
+  margin: 0;
+  font-size: 12px;
+}
+
+input[type="text"] {
+  font-family: $fontFamily;
+}
+
+textarea {
+  font-family: $fontFamily;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  width: 100px;
+  padding: 20px;
+}
+
+.header-logo {
+  max-height: 50px;
+}
+
+.container-main {
+  width: 100%;
+  height: 100%;
+}
+
+.container-home {
+  margin: 50px;
+  border: 1px solid $accentColorRGBA;
+  min-height: 70%;
+  display: flex;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.footer {
+  position: fixed;
+  height: 30px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: $accentColor;
+  padding: 5px;
+  color: white;
+  font-size: 8px;
+}
+
+.submit-button {
+  border-radius: 3px;
+  height: 25px;
+  font-size: 14px;
+  font-family: $fontFamily;
+  border: none;
+}
+
+.submit-button-ready {
+  background: $accentColor;
+  color: #fff;
+}
+
+.submit-button-notready {
+  background: #888;
+  color: #ccc;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  & span {
+    padding-left: 5px;
+  }
+}
+
+.input-is-valid {
+  font-size: 20px;
+  color: green;
+}
+
+.input-not-valid {
+  font-size: 20px;
+  color: red;
+}
+
+.grid-left {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.grid-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-layout-2-columns {
+  display: flex;
+  & span {
+    display: inline-block;
+    flex-direction: row;
+  }
 }

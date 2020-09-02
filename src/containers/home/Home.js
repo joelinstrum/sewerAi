@@ -1,19 +1,29 @@
 import React from "react";
-import { connect } from "react-redux";
-import * as utils from "@lib/utils";
+import useFavicon from "@uicomponents/hooks/useFavicon";
+import useSetTitle from "@uicomponents/hooks/useSetTitle";
+import { Header, Footer, Loader } from "@uicomponents";
+import { useData, useLoading, useSchema } from "@components/shared";
+import DataFormContainer from "./components/DataFormContainer";
+import "./home.scss";
 
-class Home extends React.PureComponent {
-  componentDidMount() {
-    utils.setWindowTitle(this.props.title);
-  }
+const Home = () => {
+  useFavicon();
+  useSetTitle();
+  const data = useData();
+  const schema = useSchema();
+  const isLoading = useLoading();
 
-  render() {
-    return <div>Home</div>;
-  }
-}
+  return (
+    <div className="container-main">
+      <Header />
+      <div className="container-home">
+        <Loader isLoading={isLoading} message={"Loading, please wait..."}>
+          {data && schema && <DataFormContainer data={data} schema={schema} />}
+        </Loader>
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
-const mapState = ({ appReducer }) => ({
-  title: appReducer.title,
-});
-
-export default connect(mapState)(Home);
+export default Home;

@@ -1,0 +1,10 @@
+{
+  "code": "B",
+  "frame_url": "https://sai-assignment.s3-us-west-2.amazonaws.com/frontend/58e89b49-7a63-41ac-901f-65e2a91d69c1.jpg",
+  "id": "58e89b49-7a63-41ac-901f-65e2a91d69c1",
+  "pipe_parameters": {
+    "diameter": 12,
+    "material": "Concrete",
+    "shape": "Circle"
+  }
+}
